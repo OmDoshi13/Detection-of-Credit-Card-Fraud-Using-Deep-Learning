@@ -1,106 +1,79 @@
-# Credit Card Fraud Detection Using Deep Learning
+# Detection-of-Credit-Card-Fraud-Using-Deep-Learning
 
-The primary goal of this project is to develop a reliable system for detecting fraudulent credit card transactions using advanced machine learning and deep learning techniques. Fraudulent activities in credit card transactions are a significant challenge for financial institutions, leading to substantial financial losses. This project addresses the issue by building a binary classification model capable of distinguishing between legitimate and fraudulent transactions, leveraging a deep neural network architecture optimized for accuracy and robustness.
+**Securing Financial Transactions via Advanced Neural Networks**
 
-Key aspects include preprocessing anonymized transaction data using techniques like normalization and oversampling with SMOTE to handle class imbalance. The model architecture consists of dense layers with dropout to prevent overfitting and uses binary cross-entropy as the loss function with the Adam optimizer. The system is evaluated using metrics like accuracy, precision, recall, and AUC-ROC. Implemented in Python with libraries such as TensorFlow, Pandas, and Scikit-learn, the project also employs Git LFS to manage large datasets efficiently. This solution demonstrates effective fraud detection and serves as a foundation for real-world applications.
-
----
-
-## Project Overview
-
-Fraud detection is a critical component of modern financial systems. This project leverages deep learning to detect fraudulent transactions in a highly imbalanced dataset. The primary focus is on:
-
-1. Handling imbalanced data using techniques like SMOTE.
-2. Using a robust neural network for binary classification.
-3. Evaluating performance using metrics suited for imbalanced datasets.
+This project deploys a high-precision deep learning model to identify fraudulent credit card transactions. By leveraging a specialized neural network architecture, it effectively tackles the challenge of class imbalance to distinguish between legitimate and fraudulent activities with high accuracy.
 
 ---
 
-## Dataset
+## 🎯 Project Scope
 
-The dataset used in this project contains transactions labeled as fraudulent (1) or legitimate (0). Key details include:
-
-- Features: 28 numerical columns transformed using PCA.
-- Target: Binary labels (0 for legitimate, 1 for fraud).
-- File: `creditcard_2023.csv`
-
-Due to confidentiality, the dataset is anonymized.
+* **Binary Classification:** Distinguishes strictly between Valid (0) and Fraudulent (1) transactions.
+* **Imbalance Handling:** Utilizes **SMOTE** (Synthetic Minority Over-sampling Technique) to normalize the dataset distribution.
+* **Performance Metrics:** Optimizes for high precision and recall, validated via **AUC-ROC** scores.
 
 ---
 
-## Features
+## 🧠 Neural Network Architecture
 
-1. **Preprocessing**:
-   - Handle missing values.
-   - Normalize and scale numerical features.
-   - Address data imbalance using SMOTE.
+The solution implements a robust Deep Neural Network (DNN) designed for stability:
 
-2. **Deep Learning Model**:
-   - Fully connected neural network with dropout layers for regularization.
-   - Binary classification using sigmoid activation.
-
-3. **Evaluation**:
-   - Evaluate the model using precision, recall, F1-score, and ROC-AUC.
-   - Visualize results with confusion matrices and SHAP values.
+* **Input Layer:** Processes 28 PCA-transformed feature vectors.
+* **Hidden Layers:**
+    * Dense layers with **ReLU** activation.
+    * **Dropout Regularization** to mitigate overfitting.
+* **Output Layer:** Sigmoid activation for probability scoring.
+* **Optimization:** Trained using **Adam** optimizer and **Binary Cross-Entropy** loss.
 
 ---
 
-## Model Architecture
+## 📊 Dataset Details
 
-The neural network implemented in this project uses the following architecture:
-
-1. **Input Layer**:  
-   Accepts 28 features from the dataset.
-
-2. **Hidden Layers**:  
-   - Dense layers with ReLU activation.  
-   - Dropout layers to prevent overfitting.
-
-3. **Output Layer**:  
-   - Dense layer with sigmoid activation for binary classification.
-
-4. **Optimizer**:  
-   Adam optimizer for gradient-based learning.
-
-5. **Loss Function**:  
-   Binary cross-entropy. 
-
-## Requirements
-
-The following software and libraries are required:
-
-- Python 3.8+
-- TensorFlow/Keras
-- scikit-learn
-- pandas
-- matplotlib
-- seaborn
-- imbalanced-learn
-- SHAP
-
-All dependencies are listed in the `requirements.txt` file.
+* **File:** `creditcard_2023.csv`
+* **Privacy:** Fully anonymized data.
+* **Features:** 28 numerical columns (PCA transformed) + Time & Amount.
+* **Labels:** 0 (Legitimate) / 1 (Fraud).
 
 ---
 
-## Installation
+## 🛠️ Tech Stack
 
-Follow these steps to set up the project:
+* **Language:** Python 3.8+
+* **Deep Learning:** TensorFlow, Keras
+* **Data Manipulation:** Pandas, NumPy, Scikit-learn
+* **Analysis:** Matplotlib, Seaborn, SHAP
+* **Version Control:** Git LFS (Large File Storage)
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/AayushGala-git/Credit-Card-Fraud-Detection-Using-Deep-Learning.git
-cd Credit-Card-Fraud-Detection-Using-Deep-Learning
+---
 
-# 2. Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate
+## 🚀 Getting Started
 
-# 3. Install dependencies
-pip install -r requirements.txt
+### Prerequisites
+Ensure **Git LFS** is installed to handle the dataset.
 
-# 4. Enable Git Large File Storage (LFS)
-git lfs install
-git lfs pull
-```
+### Installation
 
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/AayushGala-git/Credit-Card-Fraud-Detection-Using-Deep-Learning.git](https://github.com/AayushGala-git/Credit-Card-Fraud-Detection-Using-Deep-Learning.git)
+    cd Credit-Card-Fraud-Detection-Using-Deep-Learning
+    ```
 
+2.  **Environment Setup**
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    pip install -r requirements.txt
+    ```
+
+3.  **Fetch Dataset**
+    ```bash
+    git lfs install
+    git lfs pull
+    ```
+
+---
+
+## 📄 License
+
+This project is open-source and licensed under the **MIT License**.
